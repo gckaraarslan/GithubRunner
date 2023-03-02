@@ -7,33 +7,37 @@ public class ZombieController : MonoBehaviour
     public GameObject playerSpawnerGO;
     public ZombieSpawnerController zombieSpawnerScript;
     private bool isZombieAlive;
+    // Start is called before the first frame update
     void Start()
     {
         isZombieAlive = true;
     }
 
     // Update is called once per frame
-    void FixedUpdate()      //fiziksel olaylar yaptýðýmýzda fixedupdate iyi olur
+    void FixedUpdate()
     {
-        if (zombieSpawnerScript.isZombieAttacking==true)    
+        if (zombieSpawnerScript.isZombieAttacking == true)
         {
             transform.position = Vector3.MoveTowards(transform.position, playerSpawnerGO.transform.position, Time.fixedDeltaTime * 1.5f);
+
         }
-       
     }
-    private void OnCollisionEnter(Collision collision)  //is trigger olmayanlar için 
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag=="Player" && isZombieAlive==true)
+        if (collision.gameObject.tag == "Player" && isZombieAlive == true)
         {
             isZombieAlive = false;
             zombieSpawnerScript.ZombieAttackThisCop(collision.gameObject, this.gameObject);
         }
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="Bullet")
+        if (other.tag == "Bullet")
         {
-           zombieSpawnerScript.ZombieGotShot(this.gameObject);
+            Destroy(other.gameObject);
+            zombieSpawnerScript.ZombieGotShoot(this.gameObject);
         }
     }
 }

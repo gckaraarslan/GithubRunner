@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class ObstacleController : MonoBehaviour
 {
+    // Start is called before the first frame update
     private PlayerSpawnerController playerSpawnerScript;
     private GameObject playerSpawnerGO;
-
     void Start()
     {
         playerSpawnerGO = GameObject.FindGameObjectWithTag("PlayerSpawner");
-        playerSpawnerScript=playerSpawnerGO.GetComponent<PlayerSpawnerController>();
+        playerSpawnerScript = playerSpawnerGO.GetComponent<PlayerSpawnerController>();
     }
 
     // Update is called once per frame
@@ -18,11 +18,13 @@ public class ObstacleController : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other) //burda other player oluyor... obstacle'a trigger olduðunda (deðdiðinde) ...
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.tag=="Player")
+        if (other.tag == "Player")
         {
-            playerSpawnerScript.PlayerGotKilled(other.gameObject); //collide olduðunda bu metodu çalýþtýr yani playerý yok et
+            // kill player
+            playerSpawnerScript.PlayerGotKilled(other.gameObject);
         }
     }
 }

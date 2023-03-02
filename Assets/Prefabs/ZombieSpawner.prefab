@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2608789485614565170
+--- !u!1 &2032118452380751672
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,58 +8,58 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2608789485614565168}
-  - component: {fileID: 2608789485614565169}
-  - component: {fileID: 2608789485614565175}
+  - component: {fileID: 2032118452380751678}
+  - component: {fileID: 2032118452380751673}
+  - component: {fileID: 2032118452380751679}
   m_Layer: 0
   m_Name: ZombieSpawner
   m_TagString: Untagged
-  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2608789485614565168
+--- !u!4 &2032118452380751678
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2608789485614565170}
+  m_GameObject: {fileID: 2032118452380751672}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 42.19}
+  m_LocalPosition: {x: 0, y: 0, z: 33.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2608789485614565169
+--- !u!114 &2032118452380751673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2608789485614565170}
+  m_GameObject: {fileID: 2032118452380751672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e31fba82c1a66746aac99e6f6e4080b, type: 3}
+  m_Script: {fileID: 11500000, guid: 211ee1ba01b904588a707464f148cb22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieGO: {fileID: 298520310800829257, guid: 7417956307c23944bae69cb2fd0f54e8, type: 3}
+  zombieGO: {fileID: 465968393164933357, guid: d9891ad757150432e9269d20e4729f76, type: 3}
   zombieCount: 3
   zombieList: []
   playerSpawnerGO: {fileID: 0}
   playerSpawnerScript: {fileID: 0}
---- !u!65 &2608789485614565175
+--- !u!65 &2032118452380751679
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2608789485614565170}
+  m_GameObject: {fileID: 2032118452380751672}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.956593, y: 1, z: 5.7223434}
-  m_Center: {x: 0.014327288, y: 0, z: 0.17646408}
+  m_Size: {x: 13.978176, y: 1, z: 6.2851696}
+  m_Center: {x: 0.1559372, y: 0, z: -1.10818}
